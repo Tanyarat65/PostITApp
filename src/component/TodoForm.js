@@ -1,5 +1,6 @@
 import React,{useState,useEffect,useRef} from 'react'
 
+
 const TodoForm = (props) => {
 
     const [input,setInput] = useState("");
@@ -26,7 +27,7 @@ const TodoForm = (props) => {
     }
 
   return (
-     
+     <div className="todo-form">
         <form className='todo-form' onSubmit={handleSubmit}>
             <input 
                 type="text" 
@@ -35,11 +36,11 @@ const TodoForm = (props) => {
                 name="text"
                 className="todo-input"
                 onChange={handleChange}
-                // ref={inputRef}
+                ref={inputRef}
             />
             <button className='todo-button'>Add</button>
         </form>
-    
+    </div>
   )
 }
 
